@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import walletImage from "./assets/wallet-address.png";
-import BalanceCard from "./components/balanceCard/balanceCard";
+import BalanceCard from "./components/BalanceCard/BalanceCard";
 import useWallet from "./hooks/useWallet";
 
 const App = () => {
