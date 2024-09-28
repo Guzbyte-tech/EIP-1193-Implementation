@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import walletImage from "./assets/wallet-address.png";
 import BalanceCard from "./components/balanceCard/balanceCard";
