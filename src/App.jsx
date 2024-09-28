@@ -10,7 +10,6 @@ const App = () => {
 
   console.log(account);
 
-  // Map network IDs to human-readable names
   const networkNames = {
     "0x1": "Ethereum Mainnet",
     "0x3": "Ropsten Testnet",
@@ -28,14 +27,12 @@ const App = () => {
 
   const networkName = networkNames[network] || "Unknown Network: " + network;
 
-  // Update the input field with the first connected account whenever the account or network changes
   useEffect(() => {
     if (account) {
       setInputAddress(account);
     }
   }, [account, network]);
 
-  // Fetch balance for input address
   const handleGetBalance = () => {
     if (inputAddress) {
       getBalance(inputAddress);
@@ -54,7 +51,7 @@ const App = () => {
             {account ? (
               <button
                 className="w-full flex items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm"
-                disabled // Disable the button as wallet is already connected
+                disabled
               >
                 <span className="flex-1 text-left">
                   Connected to {networkName}
@@ -99,7 +96,6 @@ const App = () => {
         </button>
       </div>
 
-      {/* Display the balance of the account or input address */}
       <BalanceCard balance={balance} />
     </div>
   );

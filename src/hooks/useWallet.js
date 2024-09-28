@@ -62,7 +62,7 @@ const useWallet = () => {
     setNetwork(chainId);
   }, []);
 
-  // Setting up event listeners for account and network changes
+  // listeners for account and network changes
   useEffect(() => {
     if (provider) {
       provider.on("accountsChanged", handleAccountsChanged);
